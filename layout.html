@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Holy Grail Layout</title> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+html, body {
+	margin: 0px;
+}
+
+.container {
+	display: grid;
+	grid-template-areas:
+	"header header header"
+	"nav content side"
+	"footer footer footer";
+	grid-template-columns: 1fr 960px 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-gap: 10px;
+	height: 100vh;
+	width: 100%;
+}
+
+.wrapper {
+	margin: auto;
+	width: 960px;
+}
+
+header {
+	grid-area: header;
+	height: 40px;
+	background: grey;
+}
+
+nav {
+	grid-area: nav;
+	margin-left: 0.5rem;
+	background: grey;
+}
+
+main {
+	grid-area: content;
+}
+
+aside {
+	grid-area: side;
+	margin-right: 0.5rem;
+	background: grey;
+}
+
+footer {
+	grid-area: footer;
+	height: 40px;
+	background: grey;
+}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div class="wrapper">
+				Header content
+			</div>
+		</header>
+		<nav>
+			Navigation
+		</nav>
+		<main>
+			Main content
+		</main>
+		<aside>
+			Sidebar
+		</aside>
+		<footer>
+			<div class="wrapper">
+				Footer content
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
